@@ -7,8 +7,13 @@
 
 import Foundation
 
-final class MainViewModel {
+final class MainScreenViewModel {
+    
+    // MARK: - Properties
+    
     public var login = ""
+    
+    // MARK: - Init
     
     init(login: String) {
         self.login = login

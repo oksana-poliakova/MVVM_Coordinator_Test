@@ -7,51 +7,58 @@
 
 import UIKit
 
+// MARK: - AppCoordinator
+
 class AppCoordinator: Coordinator {
+    
+    // MARK: - Properties
+    
     var navigationController: UINavigationController
     var isLoggedIn: Bool = false
+    
+    // MARK: - Init
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
+    // MARK: - Logic
+    
+    func startScreen() {
         if isLoggedIn {
-            showMain(login: User.logins[0].login)
+            showMainScreen(login: User.logins[0].login)
         } else {
-            showLogin()
+            showLoginScreen()
         }
     }
     
-    func showLogin() {
+    func showLoginScreen() {
         let vc = LoginViewController.createObject()
         vc.coordinator = self
-        vc.viewModel = LoginViewModel()
+        vc.viewModel = LoginScreenViewModel()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showMain(login: String?) {
+    func showMainScreen(login: String?) {
         guard let login = login else {
             return
         }
 
         let vc = MainViewController.createObject()
-        let viewModel = MainViewModel(login: login)
+        let viewModel = MainScreenViewModel(login: login)
         vc.coordinator = self
         vc.viewModel = viewModel
         navigationController.viewControllers.removeAll()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showDetail() {
+    func showDetailScreen() {
         let vc = DetailViewController.createObject()
-        let viewModel = DetailViewModel()
+        let viewModel = DetailScreenViewModel()
         viewModel.model = UserData.userData
         vc.coordinator = self
         vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
         
     }
-    
-    
 }

@@ -9,13 +9,17 @@ import UIKit
 
 class DetailViewController: UIViewController, Storyboardable {
     
+    // MARK: - Properties
+    
     weak var coordinator: AppCoordinator?
-    var viewModel: DetailViewModel?
+    var viewModel: DetailScreenViewModel?
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    
+    // MARK: - ViewController life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,8 @@ class DetailViewController: UIViewController, Storyboardable {
 
     }
 
+    // MARK: - Update UI
+    
     private func updateUI() {
         nameLabel.text = viewModel?.model?.name
         cityLabel.text = viewModel?.model?.city

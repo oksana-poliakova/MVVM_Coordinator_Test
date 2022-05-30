@@ -7,6 +7,9 @@
 
 import UIKit
 
-class DetailViewModel {
+class DetailScreenViewModel {
+    
+    // MARK: - Properties
+    
     var model: UserData?
 }

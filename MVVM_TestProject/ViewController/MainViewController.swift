@@ -9,18 +9,24 @@ import UIKit
 
 class MainViewController: UIViewController, Storyboardable {
     
+    // MARK: - Properties
+    
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var aboutButton: UIButton!
     
     weak var coordinator: AppCoordinator?
-    var viewModel: MainViewModel?
+    var viewModel: MainScreenViewModel?
 
+    // MARK: - ViewController life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainLabel.text = "Hello \(viewModel?.login ?? "Default")"
     }
 
+    // MARK: - @IBActions
+    
     @IBAction func aboutButtonPressed(_ sender: UIButton) {
-        coordinator?.showDetail()
+        coordinator?.showDetailScreen()
     }
 }

@@ -8,14 +8,13 @@
 import Foundation
 import UIKit.UIColor
 
-// MARK: - Logic
-
-final class LoginViewModel {
+final class LoginScreenViewModel {
+    
     // MARK: - Properties
     
     typealias AuthorizationType = (text: String, color: UIColor)
     
-    // MARK: - Authorization
+    // MARK: - Authorization logic
     
     func userButtonPressed(login: String, password: String, completion: @escaping(AuthorizationType) -> ()) {
         if login != User.logins[0].login || password != User.logins[0].password {

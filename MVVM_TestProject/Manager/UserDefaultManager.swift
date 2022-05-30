@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - UserDefaults
+
 final class UserDefaultsManager {
     static let shared = UserDefaultsManager()
     

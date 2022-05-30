@@ -12,8 +12,8 @@
 		A108A81A28437E6B00580028 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A81928437E6B00580028 /* Storyboardable.swift */; };
 		A108A81C284384CD00580028 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A81B284384CD00580028 /* MainViewController.swift */; };
 		A108A81E284384D900580028 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A81D284384D900580028 /* DetailViewController.swift */; };
-		A108A8202843852200580028 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A81F2843852200580028 /* MainViewModel.swift */; };
-		A108A8222843852E00580028 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A8212843852E00580028 /* DetailViewModel.swift */; };
+		A108A8202843852200580028 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A81F2843852200580028 /* MainScreenViewModel.swift */; };
+		A108A8222843852E00580028 /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A8212843852E00580028 /* DetailScreenViewModel.swift */; };
 		A108A8242843856000580028 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A8232843856000580028 /* UserData.swift */; };
 		A108A8272844E83100580028 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108A8262844E83100580028 /* UserDefaultManager.swift */; };
 		A1BA48172840BBD500A0997A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA48162840BBD500A0997A /* AppDelegate.swift */; };
@@ -22,7 +22,7 @@
 		A1BA48202840BBD800A0997A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BA481F2840BBD800A0997A /* Assets.xcassets */; };
 		A1BA48232840BBD800A0997A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA48212840BBD800A0997A /* LaunchScreen.storyboard */; };
 		A1BA482F2840F17000A0997A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA482E2840F17000A0997A /* User.swift */; };
-		A1BA48342840F32300A0997A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA48332840F32300A0997A /* LoginViewModel.swift */; };
+		A1BA48342840F32300A0997A /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA48332840F32300A0997A /* LoginScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		A108A81928437E6B00580028 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		A108A81B284384CD00580028 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A108A81D284384D900580028 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A108A81F2843852200580028 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		A108A8212843852E00580028 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A108A81F2843852200580028 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		A108A8212843852E00580028 /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
 		A108A8232843856000580028 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A108A8262844E83100580028 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		A1BA48132840BBD500A0997A /* MVVM_TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +43,7 @@
 		A1BA48222840BBD800A0997A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BA48242840BBD800A0997A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BA482E2840F17000A0997A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A1BA48332840F32300A0997A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A1BA48332840F32300A0997A /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +134,9 @@
 		A1BA482B2840F0D400A0997A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A1BA48332840F32300A0997A /* LoginViewModel.swift */,
-				A108A81F2843852200580028 /* MainViewModel.swift */,
-				A108A8212843852E00580028 /* DetailViewModel.swift */,
+				A1BA48332840F32300A0997A /* LoginScreenViewModel.swift */,
+				A108A81F2843852200580028 /* MainScreenViewModel.swift */,
+				A108A8212843852E00580028 /* DetailScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -245,13 +245,13 @@
 				A1BA482F2840F17000A0997A /* User.swift in Sources */,
 				A108A81A28437E6B00580028 /* Storyboardable.swift in Sources */,
 				A1BA481B2840BBD500A0997A /* LoginViewController.swift in Sources */,
-				A108A8202843852200580028 /* MainViewModel.swift in Sources */,
+				A108A8202843852200580028 /* MainScreenViewModel.swift in Sources */,
 				A108A8242843856000580028 /* UserData.swift in Sources */,
 				A108A81428437CD900580028 /* Coordinator.swift in Sources */,
 				A1BA48172840BBD500A0997A /* AppDelegate.swift in Sources */,
 				A108A8272844E83100580028 /* UserDefaultManager.swift in Sources */,
-				A1BA48342840F32300A0997A /* LoginViewModel.swift in Sources */,
-				A108A8222843852E00580028 /* DetailViewModel.swift in Sources */,
+				A1BA48342840F32300A0997A /* LoginScreenViewModel.swift in Sources */,
+				A108A8222843852E00580028 /* DetailScreenViewModel.swift in Sources */,
 				A108A81C284384CD00580028 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

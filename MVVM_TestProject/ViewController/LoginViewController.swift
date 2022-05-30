@@ -8,6 +8,7 @@
 import UIKit
 
 final class LoginViewController: UIViewController, Storyboardable {
+    
     // MARK: - Properties
     
     @IBOutlet weak private var loginTextField: UITextField!
@@ -15,7 +16,7 @@ final class LoginViewController: UIViewController, Storyboardable {
     @IBOutlet weak private var loginButton: UIButton!
     @IBOutlet weak private var statusLabel: UILabel!
     
-    var viewModel: LoginViewModel?
+    var viewModel: LoginScreenViewModel?
     var coordinator: AppCoordinator?
     
     // MARK: - ViewController life cycle
@@ -30,7 +31,7 @@ final class LoginViewController: UIViewController, Storyboardable {
     private func setupUI() {
         statusLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         if UserDefaultsManager.shared.isAuthorized {
-            coordinator?.showMain(login: loginTextField.text ?? "")
+            coordinator?.showMainScreen(login: loginTextField.text ?? "")
         }
     }
     
@@ -41,7 +42,7 @@ final class LoginViewController: UIViewController, Storyboardable {
             self?.statusLabel.text = authorisationType.text
             self?.statusLabel.textColor = authorisationType.color
             if UserDefaultsManager.shared.isAuthorized {
-                self?.coordinator?.showMain(login: self?.loginTextField.text ?? "")
+                self?.coordinator?.showMainScreen(login: self?.loginTextField.text ?? "")
             }
         }
     }

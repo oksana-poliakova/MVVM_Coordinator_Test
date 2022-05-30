@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - UserData
+
 struct UserData {
     var name: String?
     var city: String?
